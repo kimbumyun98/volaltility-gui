@@ -103,7 +103,7 @@ class MyWindow(QMainWindow, ui):
     #Add Db
     def add_db(self):
         plugin = self.work.toPlainText()
-        path = os.getcwd() + "/plugin/init/" + plugin + "/" + plugin + ".py"
+        path = "\"" + os.getcwd() + "/plugin/init/" + plugin + "/" + plugin + ".py" + "\""
         path = pathlib.Path(path)
         print(timestamp(self) + " > [ADD DB] Plugin : " + plugin, file = log)
         print(timestamp(self) + " > [ADD DB] Plugin : " + plugin)
